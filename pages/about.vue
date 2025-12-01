@@ -205,12 +205,12 @@ onMounted(() => {
             <div class="md:col-span-4 space-y-6">
               <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Core Competencies</h4>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Frontend Development</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Backend Development</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Mobile App Development</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Creative Coding</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">API Integration</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Database Management</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Full Stack Engineering</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Cross-Platform Mobile</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">RESTful API Design</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Cloud Infrastructure</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Database Architecture</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Agile Methodologies</span>
               </div>
             </div>
 
@@ -219,26 +219,22 @@ onMounted(() => {
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <!-- Frontend Group -->
                 <div class="space-y-4">
-                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Frontend & Creative</h5>
+                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Frontend</h5>
                   <div class="space-y-2">
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Vue / Nuxt</span>
+                      <Icon name="ph:brackets-angle-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
                     <div class="flex items-center justify-between group">
                       <span class="text-sm font-medium group-hover:text-primary transition-colors">React / Next.js</span>
                       <Icon name="ph:atom-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Vue / Nuxt</span>
-                      <Icon name="ph:vue-logo-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Tailwind CSS</span>
-                      <Icon name="ph:paint-brush-broad-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">GSAP</span>
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Tailwind / GSAP</span>
                       <Icon name="ph:magic-wand-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">HTML/CSS/JS</span>
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">HTML / CSS / JS</span>
                       <Icon name="ph:file-html-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                   </div>
@@ -246,7 +242,7 @@ onMounted(() => {
 
                 <!-- Mobile Group -->
                 <div class="space-y-4">
-                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Mobile Development</h5>
+                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Mobile</h5>
                   <div class="space-y-2">
                     <div class="flex items-center justify-between group">
                       <span class="text-sm font-medium group-hover:text-primary transition-colors">Flutter</span>
@@ -256,38 +252,46 @@ onMounted(() => {
                       <span class="text-sm font-medium group-hover:text-primary transition-colors">React Native</span>
                       <Icon name="ph:atom-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Kotlin / Java</span>
+                      <Icon name="ph:android-logo-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
                   </div>
                 </div>
 
                 <!-- Backend Group -->
                 <div class="space-y-4">
-                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Backend & Database</h5>
+                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Backend</h5>
                   <div class="space-y-2">
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Node.js / SQL</span>
-                      <Icon name="ph:database-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Node.js / Python</span>
+                      <Icon name="ph:terminal-window-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Supabase</span>
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Supabase / Firebase / Appwrite</span>
                       <Icon name="ph:cloud-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Firebase</span>
-                      <Icon name="ph:fire-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">MySQL / PostgreSQL</span>
+                      <Icon name="ph:database-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                   </div>
                 </div>
 
                 <!-- Tools Group -->
                 <div class="space-y-4">
-                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Tools & Workflow</h5>
+                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Tools</h5>
                   <div class="space-y-2">
                     <div class="flex items-center justify-between group">
                       <span class="text-sm font-medium group-hover:text-primary transition-colors">Git / GitHub</span>
                       <Icon name="ph:git-branch-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">AI Integration</span>
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Gemini / ChatGPT / Claude / Qwen</span>
+                      <Icon name="ph:chat-circle-text-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">GitHub Copilot / Cursor / Windsurf</span>
                       <Icon name="ph:robot-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                   </div>
@@ -331,7 +335,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="w-px h-12 sm:h-16 md:h-20 lg:h-24 bg-text mx-auto mb-3 sm:mb-4"></div>
+      <div class="w-px h-12 sm:h-16 md:h-20 lg:h-24 bg-text mx-auto mb-8 sm:mb-4"></div>
       <div class="text-center w-full max-w-4xl mx-auto px-2 sm:px-4">
         <a 
           href="mailto:exequel.adizon@gmail.com"
