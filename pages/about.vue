@@ -144,7 +144,7 @@ onMounted(() => {
               <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary">
                 <Icon name="ph:paint-brush-bold" class="text-2xl" />
               </div>
-              <h3 class="text-3xl sm:text-4xl font-normal text-primary uppercase tracking-tighter"><span class="font-spice">D</span>esign</h3>
+              <h3 class="text-3xl sm:text-4xl text-primary font-bold uppercase tracking-tighter">Design</h3>
             </div>
             
             <div class="space-y-8">
@@ -186,7 +186,7 @@ onMounted(() => {
               <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary">
                 <Icon name="ph:code-bold" class="text-2xl" />
               </div>
-              <h3 class="text-3xl sm:text-4xl font-normal text-primary uppercase tracking-tighter"><span class="font-spice">D</span>evelopment</h3>
+              <h3 class="text-3xl sm:text-4xl text-primary font-bold uppercase tracking-tighter">Development</h3>
             </div>
             
             <div class="space-y-8">
@@ -245,7 +245,7 @@ onMounted(() => {
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Champion</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
                 </div>
-                <p class="text-base sm:text-lg uppercase mt-2">GDAP GameOn - Professional Track Category</p>
+                <p class="text-base sm:text-lg uppercase mt-2">C(Old) (St)art Hackathon by Old.St Labs</p>
             </div>
 
             <!-- Award 2 -->
@@ -254,7 +254,7 @@ onMounted(() => {
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Finalist</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
                 </div>
-                <p class="text-base sm:text-lg uppercase mt-2">C(Old) (St)art Hackathon by Old.St Labs</p>
+                <p class="text-base sm:text-lg uppercase mt-2">GDAP GameOn Awards - Professional Track Category</p>
             </div>
 
             <!-- Award 3 -->
@@ -263,7 +263,7 @@ onMounted(() => {
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Best Paper Presentation</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
                 </div>
-                <p class="text-base sm:text-lg uppercase mt-2">Innovative Solutions - UMak 8th Research Congress</p>
+                <p class="text-base sm:text-lg uppercase mt-2">UMAK 8th Research Congress</p>
             </div>
         </div>
       </div>
