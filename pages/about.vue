@@ -136,97 +136,160 @@ onMounted(() => {
       <div class="w-px h-12 sm:h-16 bg-text mx-auto mb-12 sm:mb-16"></div>
 
       <!-- Skills Section -->
-      <div class="w-full max-w-6xl mx-auto mb-16 sm:mb-20 px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16">
-          <!-- Design Column -->
-          <div class="text-left">
-            <div class="flex items-center gap-4 mb-8">
-              <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary">
-                <Icon name="ph:paint-brush-bold" class="text-2xl" />
-              </div>
-              <h3 class="text-3xl sm:text-4xl text-primary font-bold uppercase tracking-tighter">Design</h3>
+      <div class="w-full max-w-5xl mx-auto mb-16 sm:mb-24 px-4 space-y-16 sm:space-y-24">
+        
+        <!-- Design Section -->
+        <div class="text-left">
+          <div class="flex items-center gap-4 mb-8 border-b border-text/10 pb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary flex items-center justify-center text-primary shrink-0">
+              <Icon name="ph:paint-brush-bold" class="text-xl sm:text-2xl" />
             </div>
-            
-            <div class="space-y-8">
-              <div>
-                <h4 class="text-lg font-bold uppercase mb-4 opacity-70">Core Competencies</h4>
-                <div class="flex flex-wrap gap-3">
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">UI/UX Design</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Web Design</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Mobile App Design</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Prototyping</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Interaction Design</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Branding</span>
-                </div>
+            <h3 class="text-2xl sm:text-3xl md:text-4xl text-primary font-bold uppercase tracking-tighter">Design</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+            <!-- Left: Competencies -->
+            <div class="md:col-span-4 space-y-6">
+              <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Core Competencies</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">UI/UX Design</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Web Design</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Mobile App Design</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Prototyping</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Interaction Design</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Branding</span>
               </div>
-              
-              <div>
-                <h4 class="text-lg font-bold uppercase mb-4 opacity-70">Tools</h4>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:figma-logo-bold" class="text-xl" /> <span>Figma</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:image-bold" class="text-xl" /> <span>Photoshop</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:pen-nib-bold" class="text-xl" /> <span>Illustrator</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:film-strip-bold" class="text-xl" /> <span>After Effects</span>
-                  </div>
+            </div>
+
+            <!-- Right: Tools -->
+            <div class="md:col-span-8 space-y-6">
+              <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Tools</h4>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
+                  <Icon name="ph:figma-logo-bold" class="text-2xl" /> <span class="text-sm font-medium">Figma</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
+                  <Icon name="ph:image-bold" class="text-2xl" /> <span class="text-sm font-medium">Photoshop</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
+                  <Icon name="ph:pen-nib-bold" class="text-2xl" /> <span class="text-sm font-medium">Illustrator</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
+                  <Icon name="ph:film-strip-bold" class="text-2xl" /> <span class="text-sm font-medium">After Effects</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
+                  <Icon name="ph:video-camera-bold" class="text-2xl" /> <span class="text-sm font-medium">Premiere Pro</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
+                  <Icon name="ph:paint-bucket-bold" class="text-2xl" /> <span class="text-sm font-medium">Canva</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
+                  <Icon name="ph:bezier-curve-bold" class="text-2xl" /> <span class="text-sm font-medium">Affinity</span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Development Column -->
-          <div class="text-left">
-            <div class="flex items-center gap-4 mb-8">
-              <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary">
-                <Icon name="ph:code-bold" class="text-2xl" />
-              </div>
-              <h3 class="text-3xl sm:text-4xl text-primary font-bold uppercase tracking-tighter">Development</h3>
+        <!-- Development Section -->
+        <div class="text-left">
+          <div class="flex items-center gap-4 mb-8 border-b border-text/10 pb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary flex items-center justify-center text-primary shrink-0">
+              <Icon name="ph:code-bold" class="text-xl sm:text-2xl" />
             </div>
-            
-            <div class="space-y-8">
-              <div>
-                <h4 class="text-lg font-bold uppercase mb-4 opacity-70">Core Competencies</h4>
-                <div class="flex flex-wrap gap-3">
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Frontend Dev</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Backend Dev</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Mobile Dev</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Creative Coding</span>
-                  <span class="px-4 py-2 border border-text/20 rounded-full text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors cursor-default">Responsive Design</span>
-                </div>
+            <h3 class="text-2xl sm:text-3xl md:text-4xl text-primary font-bold uppercase tracking-tighter">Development</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+            <!-- Left: Competencies -->
+            <div class="md:col-span-4 space-y-6">
+              <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Core Competencies</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Frontend Development</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Backend Development</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Mobile App Development</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Creative Coding</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">API Integration</span>
+                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Database Management</span>
               </div>
-              
-              <div>
-                <h4 class="text-lg font-bold uppercase mb-4 opacity-70">Tech Stack</h4>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:file-html-bold" class="text-xl" /> <span>HTML/CSS/JS</span>
+            </div>
+
+            <!-- Right: Tech Stack -->
+            <div class="md:col-span-8 space-y-8">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Frontend Group -->
+                <div class="space-y-4">
+                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Frontend & Creative</h5>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">React / Next.js</span>
+                      <Icon name="ph:atom-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Vue / Nuxt</span>
+                      <Icon name="ph:vue-logo-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Tailwind CSS</span>
+                      <Icon name="ph:paint-brush-broad-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">GSAP</span>
+                      <Icon name="ph:magic-wand-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">HTML/CSS/JS</span>
+                      <Icon name="ph:file-html-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
                   </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:atom-bold" class="text-xl" /> <span>React / Next</span>
+                </div>
+
+                <!-- Mobile Group -->
+                <div class="space-y-4">
+                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Mobile Development</h5>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Flutter</span>
+                      <Icon name="ph:device-mobile-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">React Native</span>
+                      <Icon name="ph:atom-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
                   </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:vue-logo-bold" class="text-xl" /> <span>Vue / Nuxt</span>
+                </div>
+
+                <!-- Backend Group -->
+                <div class="space-y-4">
+                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Backend & Database</h5>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Node.js / SQL</span>
+                      <Icon name="ph:database-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Supabase</span>
+                      <Icon name="ph:cloud-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Firebase</span>
+                      <Icon name="ph:fire-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
                   </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:device-mobile-bold" class="text-xl" /> <span>Flutter</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:database-bold" class="text-xl" /> <span>Node / SQL</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:paint-brush-broad-bold" class="text-xl" /> <span>Tailwind</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:magic-wand-bold" class="text-xl" /> <span>GSAP</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                    <Icon name="ph:git-branch-bold" class="text-xl" /> <span>Git</span>
+                </div>
+
+                <!-- Tools Group -->
+                <div class="space-y-4">
+                  <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Tools & Workflow</h5>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Git / GitHub</span>
+                      <Icon name="ph:git-branch-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">AI Integration</span>
+                      <Icon name="ph:robot-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
                   </div>
                 </div>
               </div>
