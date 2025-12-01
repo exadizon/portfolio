@@ -8,6 +8,15 @@
         <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-center"><span class="font-spice">L</span>et's <span class="font-spice">W</span>ork</h3>
         <p class="text-xs sm:text-sm md:text-base mt-1 sm:mt-2 opacity-80 text-center">Ready for your next project?</p>
       </div>
+
+      <!-- Placeholder with color -->
+      <div 
+        v-else-if="!project.image"
+        class="w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110"
+        :style="{ backgroundColor: project.color || '#333' }"
+      >
+        <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white opacity-20 uppercase tracking-widest px-4 text-center">{{ project.name }}</h3>
+      </div>
       
       <!-- Regular project image -->
       <img 
