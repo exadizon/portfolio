@@ -165,14 +165,18 @@ onMounted(() => {
         <span ref="titleTextRef"><span class="font-spice">C</span>ontact</span>
       </h1>
 
-      <div class="flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center w-full">
+        
         <div class="text-center mb-8 sm:mb-8 text-lg sm:text-lg md:text-lg uppercase px-2 sm:px-4">
           <Icon name="custom:adiluexe-logo" class="block mb-3 sm:mb-4 mx-auto text-sm animate-bounce" />
           <p class="">Let's collaborate</p>
           <p class="">and build something <span ref="adjectiveRef" class="font-bold">amazing</span> together</p>
         </div>
-        <div class="w-px h-32 sm:h-40 md:h-48 lg:h-56 bg-text mx-auto mb-8 sm:mb-10 md:mb-12"></div>
+        <div class="w-px h-64 sm:h-40 md:h-48 lg:h-56 bg-text mx-auto mb-8 sm:mb-10 md:mb-12"></div>
+        
         <div class="text-center w-full max-w-4xl mx-auto px-2 sm:px-4">
+          <!-- Availability Status -->
+        
           <a
             href="mailto:exequel.adizon@gmail.com"
             class="group relative inline-flex items-center gap-2 cursor-hover transition-all duration-300 mb-6 sm:mb-8 justify-center"
@@ -185,7 +189,7 @@ onMounted(() => {
               <path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
             </svg>
           </a>
-          <div class="flex items-center justify-center gap-4 sm:gap-8 text-lg sm:text-xl md:text-2xl lg:text-3xl flex-wrap uppercase tracking-tighter">
+          <div class="mb-8 flex items-center justify-center gap-4 sm:gap-8 text-lg sm:text-xl md:text-2xl lg:text-3xl flex-wrap uppercase tracking-tighter">
             <a
               href="https://github.com/exadizon"
               target="_blank"
@@ -226,6 +230,15 @@ onMounted(() => {
               </svg>
             </a>
           </div>
+          <div class="animate-fade-in-up">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+            </span>
+            <span class="text-xl sm:text-sm font-bold text-primary uppercase tracking-tight">Available for new projects</span>
+          </div>
+        </div>
       </div>
       </div>
       
