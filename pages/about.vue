@@ -14,7 +14,7 @@ useSeoMeta({
   twitterCard: 'summary_large_image'
 })
 
-const { $gsap } = useNuxtApp()
+const { $gsap, $ScrollTrigger } = useNuxtApp()
 
 const aboutContent = ref(null)
 const titleTextRef = ref(null)
@@ -153,7 +153,7 @@ onMounted(() => {
     $gsap.from(items, {
       scrollTrigger: {
         trigger: awardsSection.value,
-        start: 'top 80%',
+        start: 'top 85%',
         toggleActions: 'play none none reverse'
       },
       y: 30,
@@ -179,6 +179,11 @@ onMounted(() => {
       ease: 'power3.out'
     })
   }
+
+  // Refresh ScrollTrigger to ensure positions are correct after layout
+  setTimeout(() => {
+    $ScrollTrigger.refresh()
+  }, 500)
 })
 </script>
 
@@ -215,12 +220,7 @@ onMounted(() => {
         
         <!-- Design Section -->
         <div class="text-left skill-group">
-          <div class="flex items-center gap-4 mb-8 border-b border-text/10 pb-4">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary flex items-center justify-center text-primary shrink-0">
-              <Icon name="ph:paint-brush-bold" class="text-xl sm:text-2xl" />
-            </div>
-            <h3 class="text-2xl sm:text-3xl md:text-4xl text-primary font-bold uppercase tracking-tighter">Design</h3>
-          </div>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl text-black font-bold uppercase tracking-tighter mb-8 border-b border-text/10 pb-4 text-center">Design</h3>
 
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
             <!-- Left: Competencies -->
@@ -275,24 +275,19 @@ onMounted(() => {
 
         <!-- Development Section -->
         <div class="text-left skill-group">
-          <div class="flex items-center gap-4 mb-8 border-b border-text/10 pb-4">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary flex items-center justify-center text-primary shrink-0">
-              <Icon name="ph:code-bold" class="text-xl sm:text-2xl" />
-            </div>
-            <h3 class="text-2xl sm:text-3xl md:text-4xl text-primary font-bold uppercase tracking-tighter">Development</h3>
-          </div>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl text-black font-bold uppercase tracking-tighter mb-8 border-b border-text/10 pb-4 text-center">Development</h3>
 
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
             <!-- Left: Competencies -->
             <div class="md:col-span-4 space-y-6">
               <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Core Competencies</h4>
               <div class="flex flex-wrap gap-2">
-                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Full Stack Engineering</span>
+                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Frontend Architecture</span>
+                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">End-to-End Engineering</span>
                 <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Cross-Platform Mobile</span>
-                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">RESTful API Design</span>
-                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Cloud Infrastructure</span>
-                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Database Architecture</span>
-                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Agile Methodologies</span>
+                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Component-Driven Development</span>
+                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Performance Optimization</span>
+                <span class="px-4 py-2 bg-text/5 rounded-md text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">API Integration & Design</span>
               </div>
             </div>
 
