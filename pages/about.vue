@@ -103,7 +103,8 @@ const stopMorphEffect = () => {
 
 onMounted(() => {
   // Header Animation
-  $gsap.from(aboutContent.value.children, {
+  const headerElements = aboutContent.value.querySelectorAll('.header-animate')
+  $gsap.from(headerElements, {
     duration: 1,
     y: 50,
     opacity: 0,
@@ -185,7 +186,7 @@ onMounted(() => {
   <div class="w-full min-h-screen flex flex-col items-center justify-center text-center py-8 sm:py-12 md:py-16 lg:py-24 xl:py-32 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
     <div ref="aboutContent" class="w-full max-w-6xl">
       <h1 
-        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal uppercase tracking-tighter mt-16 md:mt-12 lg:mt-0 xl:mt-0 mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16 font-satoshi cursor-hover leading-none"
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal uppercase tracking-tighter mt-16 md:mt-12 lg:mt-0 xl:mt-0 mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16 font-satoshi cursor-hover leading-none header-animate"
         @mouseenter="startMorphEffect"
         @mouseleave="stopMorphEffect"
       >
@@ -194,7 +195,7 @@ onMounted(() => {
       <!-- <div class="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 bg-primary mx-auto mb-8 sm:mb-12"></div> -->
 
       <!-- Short Bio -->
-      <div class="max-w-3xl mx-auto mb-12 sm:mb-16 text-lg sm:text-xl md:text-2xl uppercase leading-tight px-4 tracking-tighter">
+      <div class="max-w-3xl mx-auto mb-12 sm:mb-16 text-lg sm:text-xl md:text-2xl uppercase leading-tight px-4 tracking-tighter header-animate">
         <p class="mb-8">
           I'm <span class="font-bold text-primary">Exequel Adizon</span>, a Software Engineer based in Taguig, Philippines. 
           I bridge the gap between <span class="font-bold">aesthetic design</span> and <span class="font-bold">robust engineering</span>, building digital experiences that look good and work even better.
