@@ -18,6 +18,10 @@ const { $gsap } = useNuxtApp()
 
 const aboutContent = ref(null)
 const titleTextRef = ref(null)
+const skillsSection = ref(null)
+const experienceSection = ref(null)
+const awardsSection = ref(null)
+const contactSection = ref(null)
 let morphTimeline = null
 
 const texts = [
@@ -98,6 +102,7 @@ const stopMorphEffect = () => {
 }
 
 onMounted(() => {
+  // Header Animation
   $gsap.from(aboutContent.value.children, {
     duration: 1,
     y: 50,
@@ -105,6 +110,74 @@ onMounted(() => {
     stagger: 0.1,
     ease: 'power4.out',
   })
+
+  // Skills Animation
+  if (skillsSection.value) {
+    const sections = skillsSection.value.querySelectorAll('.skill-group')
+    sections.forEach((section) => {
+      $gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse'
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+      })
+    })
+  }
+
+  // Experience Animation
+  if (experienceSection.value) {
+    const items = experienceSection.value.querySelectorAll('.experience-item')
+    $gsap.from(items, {
+      scrollTrigger: {
+        trigger: experienceSection.value,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse'
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out'
+    })
+  }
+
+  // Awards Animation
+  if (awardsSection.value) {
+    const items = awardsSection.value.querySelectorAll('.award-item')
+    $gsap.from(items, {
+      scrollTrigger: {
+        trigger: awardsSection.value,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse'
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out'
+    })
+  }
+
+  // Contact Animation
+  if (contactSection.value) {
+    $gsap.from(contactSection.value.children, {
+      scrollTrigger: {
+        trigger: contactSection.value,
+        start: 'top 90%',
+        toggleActions: 'play none none reverse'
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: 'power3.out'
+    })
+  }
 })
 </script>
 
@@ -136,13 +209,11 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="w-px h-12 sm:h-16 bg-text mx-auto mb-12 sm:mb-16"></div>
-
       <!-- Skills Section -->
-      <div class="w-full max-w-5xl mx-auto mb-16 sm:mb-24 px-4 space-y-16 sm:space-y-24">
+      <div ref="skillsSection" class="w-full max-w-5xl mx-auto mb-16 sm:mb-24 px-4 space-y-16 sm:space-y-24">
         
         <!-- Design Section -->
-        <div class="text-left">
+        <div class="text-left skill-group">
           <div class="flex items-center gap-4 mb-8 border-b border-text/10 pb-4">
             <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary flex items-center justify-center text-primary shrink-0">
               <Icon name="ph:paint-brush-bold" class="text-xl sm:text-2xl" />
@@ -155,12 +226,12 @@ onMounted(() => {
             <div class="md:col-span-4 space-y-6">
               <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Core Competencies</h4>
               <div class="flex flex-wrap gap-2">
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">UI/UX Design</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Web Design</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Mobile App Design</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Prototyping</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Interaction Design</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Branding</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">UI/UX Design</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Web Design</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Mobile App Design</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Prototyping</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Interaction Design</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Branding</span>
               </div>
             </div>
 
@@ -168,26 +239,26 @@ onMounted(() => {
             <div class="md:col-span-8 space-y-6">
               <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Tools</h4>
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
-                  <Icon name="ph:figma-logo-bold" class="text-2xl" /> <span class="text-sm font-medium">Figma</span>
+                <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                  <Icon name="ph:figma-logo-bold" class="text-2xl group-hover:text-primary transition-colors" /> <span class="text-sm font-medium">Figma</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
-                  <Icon name="ph:image-bold" class="text-2xl" /> <span class="text-sm font-medium">Photoshop</span>
+                <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                  <Icon name="ph:image-bold" class="text-2xl group-hover:text-primary transition-colors" /> <span class="text-sm font-medium">Photoshop</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
-                  <Icon name="ph:pen-nib-bold" class="text-2xl" /> <span class="text-sm font-medium">Illustrator</span>
+                <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                  <Icon name="ph:pen-nib-bold" class="text-2xl group-hover:text-primary transition-colors" /> <span class="text-sm font-medium">Illustrator</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
-                  <Icon name="ph:film-strip-bold" class="text-2xl" /> <span class="text-sm font-medium">After Effects</span>
+                <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                  <Icon name="ph:film-strip-bold" class="text-2xl group-hover:text-primary transition-colors" /> <span class="text-sm font-medium">After Effects</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
-                  <Icon name="ph:video-camera-bold" class="text-2xl" /> <span class="text-sm font-medium">Premiere Pro</span>
+                <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                  <Icon name="ph:video-camera-bold" class="text-2xl group-hover:text-primary transition-colors" /> <span class="text-sm font-medium">Premiere Pro</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
-                  <Icon name="ph:paint-bucket-bold" class="text-2xl" /> <span class="text-sm font-medium">Canva</span>
+                <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                  <Icon name="ph:paint-bucket-bold" class="text-2xl group-hover:text-primary transition-colors" /> <span class="text-sm font-medium">Canva</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 rounded-lg bg-text/5 hover:bg-text/10 transition-colors">
-                  <Icon name="ph:bezier-curve-bold" class="text-2xl" /> <span class="text-sm font-medium">Affinity</span>
+                <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                  <Icon name="ph:bezier-curve-bold" class="text-2xl group-hover:text-primary transition-colors" /> <span class="text-sm font-medium">Affinity</span>
                 </div>
               </div>
             </div>
@@ -195,7 +266,7 @@ onMounted(() => {
         </div>
 
         <!-- Development Section -->
-        <div class="text-left">
+        <div class="text-left skill-group">
           <div class="flex items-center gap-4 mb-8 border-b border-text/10 pb-4">
             <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary flex items-center justify-center text-primary shrink-0">
               <Icon name="ph:code-bold" class="text-xl sm:text-2xl" />
@@ -208,12 +279,12 @@ onMounted(() => {
             <div class="md:col-span-4 space-y-6">
               <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Core Competencies</h4>
               <div class="flex flex-wrap gap-2">
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Full Stack Engineering</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Cross-Platform Mobile</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">RESTful API Design</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Cloud Infrastructure</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Database Architecture</span>
-                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Agile Methodologies</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Full Stack Engineering</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Cross-Platform Mobile</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">RESTful API Design</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Cloud Infrastructure</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Database Architecture</span>
+                <span class="px-4 py-2 border border-text/10 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-all duration-300 cursor-default bg-transparent">Agile Methodologies</span>
               </div>
             </div>
 
@@ -223,22 +294,22 @@ onMounted(() => {
                 <!-- Frontend Group -->
                 <div class="space-y-4">
                   <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Frontend</h5>
-                  <div class="space-y-2">
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">React / Next.js</span>
-                      <Icon name="ph:atom-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <div class="grid grid-cols-1 gap-3">
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:atom-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">React / Next.js</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Vue / Nuxt</span>
-                      <Icon name="ph:brackets-angle-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:brackets-angle-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">Vue / Nuxt</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Tailwind / GSAP</span>
-                      <Icon name="ph:magic-wand-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:magic-wand-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">Tailwind / GSAP</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">HTML / CSS / JS</span>
-                      <Icon name="ph:file-html-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:file-html-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">HTML / CSS / JS</span>
                     </div>
                   </div>
                 </div>
@@ -246,18 +317,18 @@ onMounted(() => {
                 <!-- Mobile Group -->
                 <div class="space-y-4">
                   <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Mobile</h5>
-                  <div class="space-y-2">
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Flutter</span>
-                      <Icon name="ph:device-mobile-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <div class="grid grid-cols-1 gap-3">
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:device-mobile-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">Flutter</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">React Native</span>
-                      <Icon name="ph:atom-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:atom-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">React Native</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Kotlin / Java</span>
-                      <Icon name="ph:android-logo-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:android-logo-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">Kotlin / Java</span>
                     </div>
                   </div>
                 </div>
@@ -265,18 +336,18 @@ onMounted(() => {
                 <!-- Backend Group -->
                 <div class="space-y-4">
                   <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Backend</h5>
-                  <div class="space-y-2">
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Node.js / Python / PHP</span>
-                      <Icon name="ph:terminal-window-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <div class="grid grid-cols-1 gap-3">
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:terminal-window-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">Node.js / Python / PHP</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Supabase / Firebase / Appwrite</span>
-                      <Icon name="ph:cloud-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:cloud-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">Supabase / Firebase / Appwrite</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">MySQL / PostgreSQL</span>
-                      <Icon name="ph:database-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:database-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">MySQL / PostgreSQL</span>
                     </div>
                   </div>
                 </div>
@@ -284,18 +355,18 @@ onMounted(() => {
                 <!-- Tools Group -->
                 <div class="space-y-4">
                   <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Tools</h5>
-                  <div class="space-y-2">
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Git / GitHub / Docker</span>
-                      <Icon name="ph:git-branch-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <div class="grid grid-cols-1 gap-3">
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:git-branch-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">Git / GitHub / Docker</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Gemini / ChatGPT / Claude / Qwen</span>
-                      <Icon name="ph:chat-circle-text-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:chat-circle-text-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">Gemini / ChatGPT / Claude / Qwen</span>
                     </div>
-                    <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">GitHub Copilot / Cursor / Windsurf</span>
-                      <Icon name="ph:robot-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <div class="flex items-center gap-3 p-3 rounded-lg border border-text/5 hover:border-primary/50 hover:bg-text/5 transition-all duration-300 group">
+                      <Icon name="ph:robot-bold" class="text-xl group-hover:text-primary transition-colors" /> 
+                      <span class="text-sm font-medium">GitHub Copilot / Cursor / Windsurf</span>
                     </div>
                   </div>
                 </div>
@@ -306,13 +377,13 @@ onMounted(() => {
       </div>
 
       <!-- Experience Section -->
-      <div class="w-full max-w-5xl mx-auto mb-16 sm:mb-24 px-4">
+      <div ref="experienceSection" class="w-full max-w-5xl mx-auto mb-16 sm:mb-24 px-4">
         <h2 class="text-3xl sm:text-4xl font-bold uppercase mb-12 sm:mb-16 tracking-tighter">Experience & Education</h2>
         
         <div class="relative border-l border-text/20 ml-3 sm:ml-6 space-y-12 sm:space-y-16 text-left">
             
             <!-- Education Item -->
-            <div class="relative pl-8 sm:pl-12">
+            <div class="relative pl-8 sm:pl-12 experience-item">
                 <!-- Dot -->
                 <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary"></div>
                 
@@ -324,7 +395,7 @@ onMounted(() => {
             </div>
 
             <!-- Experience Item 1 -->
-            <div class="relative pl-8 sm:pl-12">
+            <div class="relative pl-8 sm:pl-12 experience-item">
                 <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
                 
                 <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
@@ -340,7 +411,7 @@ onMounted(() => {
             </div>
 
             <!-- Experience Item 2 -->
-            <div class="relative pl-8 sm:pl-12">
+            <div class="relative pl-8 sm:pl-12 experience-item">
                 <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
                 
                 <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
@@ -355,7 +426,7 @@ onMounted(() => {
             </div>
 
             <!-- Experience Item 3 -->
-            <div class="relative pl-8 sm:pl-12">
+            <div class="relative pl-8 sm:pl-12 experience-item">
                 <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
                 
                 <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
@@ -373,11 +444,11 @@ onMounted(() => {
       </div>
 
       <!-- Awards Section -->
-      <div class="max-w-4xl mx-auto mb-16 sm:mb-20 px-4 tracking-tighter">
+      <div ref="awardsSection" class="max-w-4xl mx-auto mb-16 sm:mb-20 px-4 tracking-tighter">
         <h2 class="text-3xl sm:text-4xl font-bold uppercase mb-8 sm:mb-12">Awards & Recognition</h2>
         <div class="space-y-6 text-left">
             <!-- Award 1 -->
-            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default">
+            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default award-item">
                 <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Champion</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
@@ -386,7 +457,7 @@ onMounted(() => {
             </div>
 
             <!-- Award 2 -->
-            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default">
+            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default award-item">
                 <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Finalist</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
@@ -395,7 +466,7 @@ onMounted(() => {
             </div>
 
             <!-- Award 3 -->
-            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default">
+            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default award-item">
                 <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Best Paper Presentation</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
@@ -405,8 +476,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="w-px h-12 sm:h-16 md:h-20 lg:h-24 bg-text mx-auto mb-8 sm:mb-4"></div>
-      <div class="text-center w-full max-w-4xl mx-auto px-2 sm:px-4">
+      <div ref="contactSection" class="text-center w-full max-w-4xl mx-auto px-2 sm:px-4">
         <a 
           href="mailto:exequel.adizon@gmail.com"
           class="group relative inline-flex items-center gap-1 sm:gap-2 cursor-hover transition-all duration-300 mb-3 sm:mb-4 flex-wrap justify-center"
