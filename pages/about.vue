@@ -123,8 +123,8 @@ onMounted(() => {
       <!-- Short Bio -->
       <div class="max-w-3xl mx-auto mb-12 sm:mb-16 text-lg sm:text-xl md:text-2xl uppercase leading-tight px-4 tracking-tighter">
         <p>
-          I'm <span class="text-primary font-bold">Exequel Adizon</span>, a developer and designer based in Taguig, Philippines. 
-          I bridge the gap between <span class="text-primary">design</span> and <span class="text-primary">technology</span> to craft immersive digital experiences.
+          I'm <span class="font-bold">Exequel Adizon</span>, a Software Engineer based in Taguig, Philippines. 
+          Specializing in Frontend, Mobile Development, and Product Design.
         </p>
         <div class="mt-8">
             <NuxtLink to="/story" class="inline-block border-2 border-text px-6 py-3 rounded-full hover:bg-primary hover:text-background hover:border-primary transition-all duration-300 text-sm sm:text-base font-bold tracking-wider cursor-hover">
@@ -222,12 +222,12 @@ onMounted(() => {
                   <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Frontend</h5>
                   <div class="space-y-2">
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Vue / Nuxt</span>
-                      <Icon name="ph:brackets-angle-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                    <div class="flex items-center justify-between group">
                       <span class="text-sm font-medium group-hover:text-primary transition-colors">React / Next.js</span>
                       <Icon name="ph:atom-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <div class="flex items-center justify-between group">
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Vue / Nuxt</span>
+                      <Icon name="ph:brackets-angle-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div class="flex items-center justify-between group">
                       <span class="text-sm font-medium group-hover:text-primary transition-colors">Tailwind / GSAP</span>
@@ -283,7 +283,7 @@ onMounted(() => {
                   <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Tools</h5>
                   <div class="space-y-2">
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Git / GitHub</span>
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Git / GitHub / Docker</span>
                       <Icon name="ph:git-branch-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div class="flex items-center justify-between group">
@@ -349,9 +349,9 @@ onMounted(() => {
         <path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
           </svg>
         </a>
-        <div class="flex items-center justify-center gap-2 sm:gap-4 text-lg sm:text-2xl md:text-3xl lg:text-4xl flex-wrap">
+        <div class="flex items-center justify-center gap-4 sm:gap-8 text-lg sm:text-2xl md:text-3xl lg:text-4xl flex-wrap uppercase tracking-tighter">
           <a 
-        href="https://github.com/adiluexe" 
+        href="https://github.com/exadizon" 
         target="_blank"
         class="group relative flex items-center gap-1 sm:gap-2 cursor-hover transition-all duration-300"
           >
@@ -363,14 +363,26 @@ onMounted(() => {
           <path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
         </svg>
           </a>
-          <span class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-satoshi">/</span>
           <a 
-        href="https://www.linkedin.com/in/exequel-adizon/" 
+        href="https://www.linkedin.com/in/exadizon/" 
         target="_blank"
         class="group relative flex items-center gap-1 sm:gap-2 cursor-hover transition-all duration-300"
           >
         <span class="relative group-hover:text-primary transition-colors duration-300">
           LINKEDIN
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 ease-out group-hover:w-full"></span>
+        </span>
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
+        </svg>
+          </a>
+          <a 
+        href="/adizon_resume.pdf" 
+        target="_blank"
+        class="group relative flex items-center gap-1 sm:gap-2 cursor-hover transition-all duration-300"
+          >
+        <span class="relative group-hover:text-primary transition-colors duration-300">
+          RESUME
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 ease-out group-hover:w-full"></span>
         </span>
         <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
