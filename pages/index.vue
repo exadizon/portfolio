@@ -170,7 +170,7 @@ onMounted(() => {
     <div class="flex-1 flex items-center justify-center pt-24 pb-8 sm:pt-20 md:pt-24">
       <h1 
         ref="heroTitle" 
-        class="text-6xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl tracking-[-0.075em] text-accent cursor-hover leading-tight text-center uppercase"
+        class="text-6xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl tracking-[-0.075em] text-black cursor-hover leading-tight text-center uppercase"
         @mouseenter="startGlitchEffect"
         @mouseleave="stopGlitchEffect"
       >

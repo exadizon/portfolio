@@ -118,7 +118,7 @@ onMounted(() => {
       >
         <span ref="titleTextRef"><span class="font-spice">A</span>bout</span>
       </h1>
-      <div class="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 bg-primary mx-auto mb-8 sm:mb-12"></div>
+      <!-- <div class="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 bg-primary mx-auto mb-8 sm:mb-12"></div> -->
 
       <!-- Short Bio -->
       <div class="max-w-3xl mx-auto mb-12 sm:mb-16 text-lg sm:text-xl md:text-2xl uppercase leading-tight px-4 tracking-tighter">
@@ -126,11 +126,11 @@ onMounted(() => {
           I'm <span class="font-bold">Exequel Adizon</span>, a Software Engineer based in Taguig, Philippines. 
           Specializing in Frontend, Mobile Development, and Product Design.
         </p>
-        <div class="mt-8">
+        <!-- <div class="mt-8">
             <NuxtLink to="/story" class="inline-block border-2 border-text px-6 py-3 rounded-full hover:bg-primary hover:text-background hover:border-primary transition-all duration-300 text-sm sm:text-base font-bold tracking-wider cursor-hover">
                 My Story
             </NuxtLink>
-        </div>
+        </div> -->
       </div>
 
       <div class="w-px h-12 sm:h-16 bg-text mx-auto mb-12 sm:mb-16"></div>
