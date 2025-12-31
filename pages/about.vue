@@ -122,15 +122,18 @@ onMounted(() => {
 
       <!-- Short Bio -->
       <div class="max-w-3xl mx-auto mb-12 sm:mb-16 text-lg sm:text-xl md:text-2xl uppercase leading-tight px-4 tracking-tighter">
-        <p>
-          I'm <span class="font-bold">Exequel Adizon</span>, a Software Engineer based in Taguig, Philippines. 
-          Specializing in Frontend, Mobile Development, and Product Design.
+        <p class="mb-8">
+          I'm <span class="font-bold text-primary">Exequel Adizon</span>, a Software Engineer based in Taguig, Philippines. 
+          I bridge the gap between <span class="font-bold">aesthetic design</span> and <span class="font-bold">robust engineering</span>, building digital experiences that look good and work even better.
         </p>
-        <!-- <div class="mt-8">
-            <NuxtLink to="/story" class="inline-block border-2 border-text px-6 py-3 rounded-full hover:bg-primary hover:text-background hover:border-primary transition-all duration-300 text-sm sm:text-base font-bold tracking-wider cursor-hover">
-                My Story
-            </NuxtLink>
-        </div> -->
+        
+        <!-- Call to Action -->
+        <div class="flex justify-center gap-4">
+            <a href="/adizon_resume.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-text rounded-full hover:bg-primary hover:text-background hover:border-primary transition-all duration-300 text-sm sm:text-base font-bold tracking-wider cursor-hover group">
+                <span>Download Resume</span>
+                <Icon name="ph:arrow-down-bold" class="group-hover:translate-y-1 transition-transform" />
+            </a>
+        </div>
       </div>
 
       <div class="w-px h-12 sm:h-16 bg-text mx-auto mb-12 sm:mb-16"></div>
@@ -152,12 +155,12 @@ onMounted(() => {
             <div class="md:col-span-4 space-y-6">
               <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Core Competencies</h4>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">UI/UX Design</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Web Design</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Mobile App Design</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Prototyping</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Interaction Design</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Branding</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">UI/UX Design</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Web Design</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Mobile App Design</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Prototyping</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Interaction Design</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Branding</span>
               </div>
             </div>
 
@@ -205,12 +208,12 @@ onMounted(() => {
             <div class="md:col-span-4 space-y-6">
               <h4 class="text-sm font-bold uppercase tracking-widest opacity-60">Core Competencies</h4>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Full Stack Engineering</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Cross-Platform Mobile</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">RESTful API Design</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Cloud Infrastructure</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Database Architecture</span>
-                <span class="px-3 py-1.5 border border-text/20 rounded-full text-xs sm:text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors cursor-default">Agile Methodologies</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Full Stack Engineering</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Cross-Platform Mobile</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">RESTful API Design</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Cloud Infrastructure</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Database Architecture</span>
+                <span class="px-4 py-2 bg-text/5 border border-transparent rounded-lg text-xs sm:text-sm uppercase tracking-wide hover:bg-primary hover:text-background transition-all duration-300 cursor-default">Agile Methodologies</span>
               </div>
             </div>
 
@@ -264,7 +267,7 @@ onMounted(() => {
                   <h5 class="text-xs font-bold uppercase tracking-widest text-primary opacity-80 border-b border-text/10 pb-2">Backend</h5>
                   <div class="space-y-2">
                     <div class="flex items-center justify-between group">
-                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Node.js / Python</span>
+                      <span class="text-sm font-medium group-hover:text-primary transition-colors">Node.js / Python / PHP</span>
                       <Icon name="ph:terminal-window-bold" class="text-lg opacity-50 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div class="flex items-center justify-between group">
@@ -302,35 +305,102 @@ onMounted(() => {
         </div>
       </div>
 
+      <!-- Experience Section -->
+      <div class="w-full max-w-5xl mx-auto mb-16 sm:mb-24 px-4">
+        <h2 class="text-3xl sm:text-4xl font-bold uppercase mb-12 sm:mb-16 tracking-tighter">Experience & Education</h2>
+        
+        <div class="relative border-l border-text/20 ml-3 sm:ml-6 space-y-12 sm:space-y-16 text-left">
+            
+            <!-- Education Item -->
+            <div class="relative pl-8 sm:pl-12">
+                <!-- Dot -->
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary"></div>
+                
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase text-primary">Bachelor of Science in Computer Science</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0">Aug 2022 — Aug 2026</span>
+                </div>
+                <h4 class="text-lg font-medium uppercase mb-4 opacity-80">University of Makati</h4>
+            </div>
+
+            <!-- Experience Item 1 -->
+            <div class="relative pl-8 sm:pl-12">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
+                
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase">Frontend Developer</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0">Aug 2025 — Nov 2025</span>
+                </div>
+                <h4 class="text-lg font-medium uppercase mb-4 text-primary">EdLab Ltd.</h4>
+                <ul class="list-disc list-outside ml-4 space-y-2 text-base sm:text-lg opacity-80 leading-relaxed">
+                    <li>Maintained production CodeIgniter (PHP) codebase, debugging complex dynamic PDF generation tools to ensure accurate report delivery for 500+ student performance reviews monthly</li>
+                    <li>Bridged the design-engineering gap by creating high-fidelity Figma prototypes and marketing assets, ensuring strict brand consistency across web products and social channels with 95% stakeholder approval rate</li>
+                    <li>Reduced PDF generation errors by 40% through systematic debugging and code optimization</li>
+                </ul>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="relative pl-8 sm:pl-12">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
+                
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase">Technical Support Staff</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0">Feb 2025 — May 2025</span>
+                </div>
+                <h4 class="text-lg font-medium uppercase mb-4 text-primary">Commission on Elections (COMELEC)</h4>
+                <ul class="list-disc list-outside ml-4 space-y-2 text-base sm:text-lg opacity-80 leading-relaxed">
+                    <li>Provided critical on-site technical support during the National Elections, ensuring zero-failure operation of Automated Counting Machines (ACMs) across 8 precincts in a high-pressure environment</li>
+                    <li>Troubleshot hardware and software discrepancies in real-time with 98% issue resolution rate, maintaining the integrity and speed of voting data processing for 8,000+ voters</li>
+                </ul>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="relative pl-8 sm:pl-12">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
+                
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase">Head of Graphics</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0">Apr 2023 — Apr 2025</span>
+                </div>
+                <h4 class="text-lg font-medium uppercase mb-4 text-primary">Fortem Ardeas Esports</h4>
+                <ul class="list-disc list-outside ml-4 space-y-2 text-base sm:text-lg opacity-80 leading-relaxed">
+                    <li>Built the organization's foundational visual identity from scratch, establishing a scalable design system and UI/UX guidelines for all digital, broadcast, and physical assets</li>
+                    <li>Designed dynamic graphics for internal tournaments and partner collaborations (Moonton Philippines, Tier One Entertainment), achieving 100K+ engagements by creating cohesive social campaigns, live‑stream overlays, and event branding.</li>
+                </ul>
+            </div>
+
+        </div>
+      </div>
+
       <!-- Awards Section -->
       <div class="max-w-4xl mx-auto mb-16 sm:mb-20 px-4 tracking-tighter">
         <h2 class="text-3xl sm:text-4xl font-bold uppercase mb-8 sm:mb-12">Awards & Recognition</h2>
         <div class="space-y-6 text-left">
             <!-- Award 1 -->
-            <div class="group border-b border-text/20 pb-6 hover:border-primary transition-colors duration-300">
+            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default">
                 <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Champion</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
                 </div>
-                <p class="text-base sm:text-lg uppercase mt-2">C(Old) (St)art Hackathon by Old.St Labs</p>
+                <p class="text-base sm:text-lg uppercase mt-2 text-text/80 group-hover:text-text transition-colors">C(Old) (St)art Hackathon by Old.St Labs</p>
             </div>
 
             <!-- Award 2 -->
-            <div class="group border-b border-text/20 pb-6 hover:border-primary transition-colors duration-300">
+            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default">
                 <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Finalist</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
                 </div>
-                <p class="text-base sm:text-lg uppercase mt-2">GDAP GameOn Awards - Professional Track Category</p>
+                <p class="text-base sm:text-lg uppercase mt-2 text-text/80 group-hover:text-text transition-colors">GDAP GameOn Awards - Professional Track Category</p>
             </div>
 
             <!-- Award 3 -->
-            <div class="group border-b border-text/20 pb-6 hover:border-primary transition-colors duration-300">
+            <div class="group border-b border-text/20 pb-6 hover:border-primary hover:pl-4 transition-all duration-300 cursor-default">
                 <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
                     <h3 class="text-xl sm:text-2xl font-bold uppercase group-hover:text-primary transition-colors">Best Paper Presentation</h3>
                     <span class="text-sm sm:text-base opacity-60 font-mono">2025</span>
                 </div>
-                <p class="text-base sm:text-lg uppercase mt-2">UMAK 8th Research Congress</p>
+                <p class="text-base sm:text-lg uppercase mt-2 text-text/80 group-hover:text-text transition-colors">UMAK 8th Research Congress</p>
             </div>
         </div>
       </div>
