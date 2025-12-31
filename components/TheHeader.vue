@@ -11,12 +11,12 @@
         </div>
         <div class="w-1/3 text-center">
           <NuxtLink to="/" class="font-bold text-xl" @click="closeMenu">
-            <span class="text-2xl font-normal tracking-tighter"><span class="font-spice">A</span>DILUEXE</span>
+            <span class="text-2xl font-normal tracking-tight">&lt;exadizon&gt;</span>
           </NuxtLink>
           
         </div>
-        <div class="w-1/3 text-right tracking-tighter">
-          <span class="font-normal hidden md:inline">VOL. 0</span>
+        <div class="w-1/3 text-right tracking-tight">
+          <span class="text-xl font-normal hidden md:inline">v12.31.25</span>
           <button
             class="md:hidden inline-block p-2 focus:outline-none z-50"
             aria-label="Toggle menu"
