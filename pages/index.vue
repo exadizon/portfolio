@@ -228,19 +228,19 @@ onMounted(() => {
     <!-- Fixed Footer -->
     <div class="fixed bottom-0 left-0 w-full py-6 flex justify-center items-center z-50 pointer-events-none">
       <div class="flex gap-6 sm:gap-8 md:gap-10 text-sm sm:text-base lowercase tracking-tight pointer-events-auto text-primary mix-blend-difference">
-        <a href="https://www.linkedin.com/in/exequeladizon/" target="_blank" class="footer-link relative group">
+        <a href="https://www.linkedin.com/in/exadizon/" target="_blank" class="footer-link relative group">
           <span>linkedin</span>
           <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-current scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
         </a>
-        <a href="mailto:hello@adiluexe.com" class="footer-link relative group">
+        <a href="mailto:exequeladizon@gmail.com" class="footer-link relative group">
           <span>email</span>
           <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-current scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
         </a>
-        <a href="https://github.com/adiluexe" target="_blank" class="footer-link relative group">
+        <a href="https://github.com/exadizon" target="_blank" class="footer-link relative group">
           <span>github</span>
           <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-current scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
         </a>
-        <a href="/resume.pdf" target="_blank" class="footer-link relative group">
+        <a href="/adizon_resume.pdf" target="_blank" class="footer-link relative group">
           <span>resume</span>
           <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-current scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
         </a>
