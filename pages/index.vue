@@ -170,7 +170,7 @@ onMounted(() => {
     <div class="flex-1 flex items-center justify-center pt-24 pb-8 sm:pt-20 md:pt-24">
       <h1 
         ref="heroTitle" 
-        class="text-6xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl tracking-[-0.075em] text-primary cursor-hover leading-tight text-center uppercase"
+        class="text-6xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl tracking-[-0.075em] text-accent cursor-hover leading-tight text-center uppercase"
         @mouseenter="startGlitchEffect"
         @mouseleave="stopGlitchEffect"
       >
@@ -179,7 +179,7 @@ onMounted(() => {
     </div>
 
     <!-- Three-column Info Section -->
-    <div class="w-full pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 md:px-8">
+    <div class="w-full pb-20 sm:pb-24 md:pb-32 px-4 sm:px-6 md:px-8">
       <div class="container mx-auto max-w-7xl">
         <!-- Mobile Layout: Single Column Stack -->
         <div class="block md:hidden space-y-8">
@@ -200,7 +200,10 @@ onMounted(() => {
           
           <!-- Hero Image -->
           <div class="text-center mobile-image">
-            <div class="h-64 sm:h-72 bg-primary rounded"></div>
+            <div class="relative inline-block">
+              <img src="/hero/hero.png" alt="Exequel Adizon" class="h-64 sm:h-72 mx-auto object-contain" />
+              <div class="absolute inset-0 bg-accent opacity-10"></div>
+            </div>
           </div>
         </div>
 
@@ -214,7 +217,10 @@ onMounted(() => {
           <!-- Middle Column -->
           <div class="w-1/3 max-w-xs text-center desktop-column">
             <!-- Animated hero image / illustration goes here -->
-            <div class="h-48 md:h-56 lg:h-64 xl:h-80 bg-primary rounded"></div>
+            <div class="relative inline-block">
+              <img src="/hero/hero.png" alt="Exequel Adizon" class="h-48 md:h-56 lg:h-64 xl:h-80 mx-auto object-contain" />
+              <div class="absolute inset-0 bg-accent opacity-10"></div>
+            </div>
           </div>
           <!-- Right Column -->
           <div class="w-1/3 max-w-xs text-center desktop-column">
@@ -227,7 +233,7 @@ onMounted(() => {
 
     <!-- Fixed Footer -->
     <div class="fixed bottom-0 left-0 w-full py-6 flex justify-center items-center z-50 pointer-events-none">
-      <div class="flex gap-6 sm:gap-8 md:gap-10 text-sm sm:text-base uppercase tracking-tight pointer-events-auto text-primary mix-blend-difference">
+      <div class="flex gap-6 sm:gap-8 md:gap-10 text-sm sm:text-base tracking-tight pointer-events-auto text-black mix-blend-difference lowercase font-bold">
         <a href="https://www.linkedin.com/in/exadizon/" target="_blank" class="footer-link relative group">
           <span>linkedin</span>
           <span class="absolute -bottom-1 left-0 w-full h-[1px] bg-current scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
