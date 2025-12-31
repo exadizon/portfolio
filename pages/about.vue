@@ -120,7 +120,8 @@ onMounted(() => {
         scrollTrigger: {
           trigger: section,
           start: 'top 85%',
-          toggleActions: 'play none none reverse'
+          toggleActions: 'play none none reverse',
+          invalidateOnRefresh: true
         },
         y: 30,
         opacity: 0,
@@ -137,7 +138,8 @@ onMounted(() => {
       scrollTrigger: {
         trigger: experienceSection.value,
         start: 'top 80%',
-        toggleActions: 'play none none reverse'
+        toggleActions: 'play none none reverse',
+        invalidateOnRefresh: true
       },
       y: 30,
       opacity: 0,
@@ -153,8 +155,9 @@ onMounted(() => {
     $gsap.from(items, {
       scrollTrigger: {
         trigger: awardsSection.value,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse'
+        start: 'top 90%',
+        toggleActions: 'play none none reverse',
+        invalidateOnRefresh: true
       },
       y: 30,
       opacity: 0,
@@ -170,7 +173,8 @@ onMounted(() => {
       scrollTrigger: {
         trigger: contactSection.value,
         start: 'top 90%',
-        toggleActions: 'play none none reverse'
+        toggleActions: 'play none none reverse',
+        invalidateOnRefresh: true
       },
       y: 30,
       opacity: 0,
@@ -217,6 +221,7 @@ onMounted(() => {
 
       <!-- Skills Section -->
       <div ref="skillsSection" class="w-full max-w-5xl mx-auto mb-16 sm:mb-24 px-4 space-y-16 sm:space-y-24">
+        <h2 class="text-3xl sm:text-4xl font-bold uppercase tracking-tighter">Skills & Expertise</h2>
         
         <!-- Design Section -->
         <div class="text-left skill-group">
