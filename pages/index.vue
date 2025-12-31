@@ -200,9 +200,10 @@ onMounted(() => {
           
           <!-- Hero Image -->
           <div class="text-center mobile-image">
-            <div class="relative inline-block">
-              <img src="/hero/hero.png" alt="Exequel Adizon" class="h-64 sm:h-72 mx-auto object-contain" />
-              <div class="absolute inset-0 bg-accent opacity-10"></div>
+            <div class="relative inline-block h-64 sm:h-72 w-full">
+              <ClientOnly>
+                <Vue3Lottie animationLink="/hero/hero.json" height="100%" width="100%" />
+              </ClientOnly>
             </div>
           </div>
         </div>
@@ -217,9 +218,10 @@ onMounted(() => {
           <!-- Middle Column -->
           <div class="w-1/3 max-w-xs text-center desktop-column">
             <!-- Animated hero image / illustration goes here -->
-            <div class="relative inline-block">
-              <img src="/hero/hero.png" alt="Exequel Adizon" class="h-48 md:h-56 lg:h-64 xl:h-80 mx-auto object-contain" />
-              <div class="absolute inset-0 bg-accent opacity-10"></div>
+            <div class="relative inline-block h-48 md:h-56 lg:h-64 xl:h-80 w-full">
+              <ClientOnly>
+                <Vue3Lottie animationLink="/hero/hero.json" height="100%" width="100%" />
+              </ClientOnly>
             </div>
           </div>
           <!-- Right Column -->
