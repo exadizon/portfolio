@@ -100,110 +100,59 @@ const stopMorphEffect = () => {
 const projects = ref([
   { 
     id: 1, 
+    name: 'ALARP', 
+    description: 'A full-stack Flutter app featuring interactive 3D anatomical models and a custom 2D collimation simulator. Architected with Supabase and PostgreSQL to handle secure authentication and a real-time leaderboard for 100+ concurrent users.',
+    stack: 'FLUTTER / SUPABASE / CUSTOMPAINT / 3DVIEWER',
+    image: '/works/alarp_showcase.png',
+    github: 'https://github.com/adiluexe/alarp',
+    website: null, // Mobile app - no website
+    type: 'Mobile'
+  },
+  { 
+    id: 2, 
     name: 'FLOWFIT', 
-    description: 'Champion of the C(Old) (St)art Hackathon 2025 by Old.St Labs. A fitness app for children featuring a companion pet whale named Flowy. Teaches healthy habits by tracking workouts, food, steps, water intake, and sleep. Includes mood tracking, wearable integration, pose detection, and food scanning.',
+    description: 'Champion of the C(Old) (St)art Hackathon 2025. A gamified health app featuring a "Virtual Pet" system that evolves based on real-time user habits. Architected the frontend logic to translate complex health metrics into an intuitive, child-friendly interface using Flutter and WearOS.',
     stack: 'FLUTTER / TENSORFLOW / WEARABLES',
-    image: null,
+    image: '/works/flowfit_showcase.png',
     color: '#4ECDC4', // Teal/Aqua for fitness/water
-    github: null,
+    github: 'https://github.com/KpG782/flowfit',
     website: null,
     type: 'Hackathon Winner'
   },
   { 
-    id: 2, 
-    name: 'ARS (AUTO REPAIR SERVICE)', 
-    description: 'An "Uber for repairs" platform connecting users with mechanics. Users can request on-location repairs, while mechanics can earn income by accepting jobs. Features real-time booking and location services.',
-    stack: 'FLUTTER / GOOGLE MAPS',
-    image: null,
-    color: '#FF6B6B', // Red/Orange for urgency/repair
-    github: null,
-    website: null,
-    type: 'Mobile Application'
-  },
-  { 
     id: 3, 
     name: 'BATHALA', 
-    description: 'A roguelike Filipino mythology-inspired card game built with Phaser.js. Experience strategic gameplay blending elements of Balatro and Slay the Spire.',
-    stack: 'PHASER.JS',
-    image: null,
+    description: 'GDAP GameOn 2025 Finalist. A web-based roguelike built with a modular, component-driven architecture. Features a complex state management system and a rule-based Dynamic Difficulty Adjustment (DDA) algorithm that adapts gameplay in real-time based on player performance metrics.',
+    stack: 'PHASER.JS / TYPESCRIPT',
+    image: '/works/bathala_showcase.png',
     color: '#8D5B4C', // Brown/Earth for mythology
     github: 'https://github.com/devlocke-acsad/bathala',
     website: 'https://bathala.quest',
-    type: 'Game Development'
+    type: 'Game + Web'
   },
   { 
     id: 4, 
-    name: 'PALAD', 
-    description: 'A Filipino Sign Language learning app that teaches sign by its integrated sign detection where you point your camera to practice signs given by the app.',
-    stack: 'FLUTTER / TENSORFLOW',
-    image: null,
-    color: '#F4A261', // Sandy Brown/Skin tone
+    name: 'ARS (AUTO REPAIR SERVICE)', 
+    description: 'Best Paper Presentation at the University of Makati 8th Research Congress. An "Uber for repairs" platform connecting users with mechanics through real-time booking and geolocation. Features a dual-interface system for service requests and job management.',
+    stack: 'FLUTTER / GOOGLE MAPS',
+    image: '/works/ars_showcase.png',
+    color: '#FF6B6B', // Red/Orange for urgency/repair
     github: null,
     website: null,
-    type: 'Mobile + ML'
+    type: 'Mobile'
   },
   { 
     id: 5, 
-    name: 'PORTFOLIO', 
-    description: 'A personal portfolio site highlighting my work, skills, and creative journey as a developer and designer.',
-    stack: 'NUXT.JS / VUE.JS / GSAP / TAILWIND',
-    image: '/works/adiluexe.png',
-    github: 'https://github.com/adiluexe/portfolio',
-    website: 'https://adiluexe.vercel.app',
-    type: 'Web Development'
-  },
-  { 
-    id: 6, 
     name: 'HERONFIT', 
     description: 'A fitness app for the University of Makati gym that helps you track workouts, monitor progress, get personalized recommendations, and book sessions—with an integrated gym management system.',
     stack: 'FLUTTER / NEXT.JS / REACT / SUPABASE / FLASK',
-    image: '/works/heronfit.png',
+    image: '/works/heronfit_showcase.png',
     github: 'https://github.com/skypiea-tech/heronfit',
     website: null, // Mobile app - no website
     type: 'Mobile + Web'
   },
   { 
-    id: 7, 
-    name: 'ALARP', 
-    description: 'An interactive learning app for radiologic technology students—explore 3D radiographic positioning, practice 2D collimation with instant feedback, and sharpen your skills through timed challenges.',
-    stack: 'FLUTTER / SUPABASE / CUSTOMPAINT / 3DVIEWER',
-    image: '/works/alarp.png',
-    github: 'https://github.com/adiluexe/alarp',
-    website: null, // Mobile app - no website
-    type: 'Mobile Development'
-  },
-  // { 
-  //   id: 8, 
-  //   name: 'SNAPGRADE', 
-  //   description: '[In development] An AI-powered grading system designed for educators to easily and efficiently evaluate student submissions by scanning bubble sheets. Results are exportable in Excel and other related formats, streamlining the assessment process.',
-  //   stack: 'NEXT.JS / REACT / OPENCV / TENSORFLOW / FASTAPI',
-  //   image: '/works/snapgrade.png',
-  //   github: 'https://github.com/adiluexe/snapgrade',
-  //   website: 'https://snapgrade-ai.vercel.app',
-  //   type: 'Web + ML'
-  // },
-  { 
-    id: 9, 
-    name: 'KOPI KOUNT', 
-    description: 'A visually engaging, mobile-friendly website for Kopi Kount—Palpitate Moderately, a coffee shop in East Rembo, Makati City. Designed to showcase the shop’s unique offerings and inviting atmosphere, crafted by Salig.',
-    stack: 'HTML / CSS / JAVASCRIPT / BOOTSTRAP',
-    image: '/works/kopi_kount.webp', 
-    github: 'https://github.com/exzequel/kopi-kount',
-    website: 'https://kopi-kount.vercel.app/', 
-    type: 'Web'
-  },
-  { 
-    id: 10, 
-    name: 'CALBEANS', 
-    description: "A vibrant, mobile-friendly website for Calbeans Coffee, designed to highlight the shop’s specialty brews, signature products, and cozy atmosphere. Discover the Calbeans experience through engaging visuals and intuitive navigation.",
-    stack: 'HTML / CSS / JAVASCRIPT / BOOTSTRAP',
-    image: '/works/calbeans.webp', 
-    github: 'https://github.com/exzequel/calbeans-coffee',
-    website: 'https://calbeans.vercel.app/',
-    type: 'Web'
-  },
-  { 
-    id: 11, 
+    id: 6, 
     name: 'LET\'S WORK TOGETHER', 
     description: 'Have a project in mind? Let\'s collaborate and create something amazing',
     stack: 'YOUR IDEAS + MY SKILLS',
