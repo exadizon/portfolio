@@ -11,12 +11,21 @@
         </div>
         <div class="w-1/3 text-center">
           <NuxtLink to="/" class="font-bold text-xl" @click="closeMenu">
-            <span class="text-2xl font-normal tracking-tight">&lt;exadizon&gt;</span>
+            <span class="text-xl font-normal tracking-tighter">exadizon</span>
           </NuxtLink>
           
         </div>
         <div class="w-1/3 text-right tracking-tight">
-          <span class="text-xl font-normal hidden md:inline">v12.31.25</span>
+          <div class="hidden md:flex flex-col items-end justify-center leading-none">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+              </span>
+              <span class="text-xs font-normal uppercase tracking-tight">Available</span>
+            </div>
+            <span class="text-[10px] font-normal uppercase tracking-tight opacity-60">For Work</span>
+          </div>
           <button
             class="md:hidden inline-block p-2 focus:outline-none z-50"
             aria-label="Toggle menu"
