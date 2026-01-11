@@ -2,16 +2,63 @@
 import { onMounted, ref } from 'vue'
 
 // SEO Meta Tags for About Page
+const route = useRoute()
+const canonicalUrl = `https://exadizon.work${route.path}`
+
 useSeoMeta({
-  title: 'About - Exequel Adizon',
-  description: 'Creative Developer & Designer based in Taguig, Philippines. Specialized in UI/UX Design and Full-stack Development.',
-  ogTitle: 'About - Exequel Adizon',
-  ogDescription: 'Creative Developer & Designer based in Taguig, Philippines. Specialized in UI/UX Design and Full-stack Development.',
+  title: 'About Exequel Adizon | Skills, Experience & Awards',
+  description: 'Learn about Exequel Adizon (@exadizon) - Software Engineer with expertise in React, Flutter, and Product Design. GDAP GameOn 2025 Finalist, Best Paper Presentation Award winner, and C(Old) (St)art Hackathon Champion. View skills, experience, and achievements.',
+  keywords: 'Exequel Adizon about, Software Engineer skills, React developer, Flutter developer, Product Designer, GDAP GameOn Finalist, Awards, Experience, Taguig Philippines, Full Stack Developer',
+  author: 'Exequel Adizon',
+  robots: 'index, follow',
+  canonical: canonicalUrl,
+  
+  // OpenGraph
+  ogTitle: 'About Exequel Adizon | Software Engineer & Designer',
+  ogDescription: 'Software Engineer specializing in React, Flutter, and Product Design. GDAP GameOn 2025 Finalist and award-winning developer. Explore my skills, experience, and achievements in software development and design.',
   ogImage: '/images/og-image.jpg',
-  twitterTitle: 'About - Exequel Adizon',
-  twitterDescription: 'Creative Developer & Designer based in Taguig, Philippines. Specialized in UI/UX Design and Full-stack Development.',
+  ogImageAlt: 'About Exequel Adizon - Skills and Experience',
+  ogUrl: canonicalUrl,
+  ogType: 'profile',
+  ogSiteName: 'Exequel Adizon Portfolio',
+  ogLocale: 'en_US',
+  
+  // Twitter Card
+  twitterCard: 'summary_large_image',
+  twitterSite: '@exadizon',
+  twitterCreator: '@exadizon',
+  twitterTitle: 'About Exequel Adizon | Skills, Experience & Awards',
+  twitterDescription: 'Software Engineer specializing in React, Flutter, and Product Design. GDAP GameOn Finalist and award-winning developer.',
   twitterImage: '/images/og-image.jpg',
-  twitterCard: 'summary_large_image'
+  twitterImageAlt: 'About Exequel Adizon'
+})
+
+// Structured Data (JSON-LD)
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ProfilePage',
+        mainEntity: {
+          '@type': 'Person',
+          name: 'Exequel Adizon',
+          jobTitle: 'Software Engineer & Product Designer',
+          knowsAbout: [
+            'React', 'Flutter', 'TypeScript', 'JavaScript', 'Product Design', 
+            'UI/UX Design', 'Frontend Development', 'Mobile Development',
+            'Next.js', 'Supabase', 'GSAP', 'Figma'
+          ],
+          award: [
+            'GDAP GameOn 2025 Finalist',
+            'C(Old) (St)art Hackathon 2025 Champion',
+            'Best Paper Presentation - University of Makati 8th Research Congress'
+          ]
+        }
+      })
+    }
+  ]
 })
 
 const { $gsap, $ScrollTrigger } = useNuxtApp()

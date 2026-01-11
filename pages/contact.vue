@@ -2,16 +2,64 @@
 import { onMounted, ref } from 'vue'
 
 // SEO Meta Tags for Contact Page
+const route = useRoute()
+const canonicalUrl = `https://exadizon.work${route.path}`
+
 useSeoMeta({
-  title: 'Contact - Exequel Adizon',
-  description: 'Get in touch with Exequel Adizon (@adiluexe). Ready to collaborate on your next project? Let\'s create something amazing together.',
-  ogTitle: 'Contact - Exequel Adizon',
-  ogDescription: 'Get in touch with Exequel Adizon (@adiluexe). Ready to collaborate on your next project? Let\'s create something amazing together.',
+  title: 'Contact Exequel Adizon | Available for New Projects',
+  description: 'Get in touch with Exequel Adizon (@exadizon) for software development projects. Available for Frontend Development (React), Mobile Apps (Flutter), and Product Design work. Based in Taguig, Philippines. Email: exequel.adizon@gmail.com',
+  keywords: 'Contact Exequel Adizon, hire software engineer, hire React developer, hire Flutter developer, freelance developer Philippines, software development Taguig, available for projects',
+  author: 'Exequel Adizon',
+  robots: 'index, follow',
+  canonical: canonicalUrl,
+  
+  // OpenGraph
+  ogTitle: 'Contact Exequel Adizon | Available for Projects',
+  ogDescription: 'Ready to collaborate? Get in touch for Frontend Development (React), Mobile Apps (Flutter), and Product Design. Currently available for new projects in Taguig, Philippines.',
   ogImage: '/images/og-image.jpg',
-  twitterTitle: 'Contact - Exequel Adizon',
-  twitterDescription: 'Get in touch with Exequel Adizon (@adiluexe). Ready to collaborate on your next project? Let\'s create something amazing together.',
+  ogImageAlt: 'Contact Exequel Adizon',
+  ogUrl: canonicalUrl,
+  ogType: 'website',
+  ogSiteName: 'Exequel Adizon Portfolio',
+  ogLocale: 'en_US',
+  
+  // Twitter Card
+  twitterCard: 'summary',
+  twitterSite: '@exadizon',
+  twitterCreator: '@exadizon',
+  twitterTitle: 'Contact Exequel Adizon | Available for New Projects',
+  twitterDescription: 'Get in touch for software development projects. Available for React, Flutter, and Product Design work.',
   twitterImage: '/images/og-image.jpg',
-  twitterCard: 'summary_large_image'
+  twitterImageAlt: 'Contact Information'
+})
+
+// Structured Data (JSON-LD)
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        mainEntity: {
+          '@type': 'Person',
+          name: 'Exequel Adizon',
+          email: 'exequel.adizon@gmail.com',
+          url: 'https://exadizon.work',
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'Professional Inquiries',
+            email: 'exequel.adizon@gmail.com',
+            availableLanguage: ['English', 'Filipino']
+          },
+          sameAs: [
+            'https://github.com/exadizon',
+            'https://www.linkedin.com/in/exadizon/'
+          ]
+        }
+      })
+    }
+  ]
 })
 
 const { $gsap } = useNuxtApp()

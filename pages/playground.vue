@@ -2,16 +2,62 @@
 import { onMounted, ref } from 'vue'
 
 // SEO Meta Tags for Playground Page
+const route = useRoute()
+const canonicalUrl = `https://exadizon.work${route.path}`
+
 useSeoMeta({
-  title: 'Playground - Exequel Adizon',
-  description: 'Discover experimental projects and creative explorations by Exequel Adizon (@adiluexe). A collection of innovative digital experiments and artistic endeavors.',
-  ogTitle: 'Playground - Exequel Adizon',
-  ogDescription: 'Discover experimental projects and creative explorations by Exequel Adizon (@adiluexe). A collection of innovative digital experiments and artistic endeavors.',
+  title: 'Creative Playground | Exequel Adizon Motion Graphics & Design',
+  description: 'Explore creative experiments and motion graphics by Exequel Adizon (@exadizon). Video editing, animation, ARDE Esports graphics, and artistic explorations. A showcase of design work, typography, and visual storytelling.',
+  keywords: 'Exequel Adizon creative work, motion graphics, video editing, animation, ARDE Esports, graphic design, typography, visual design, creative experiments',
+  author: 'Exequel Adizon',
+  robots: 'index, follow',
+  canonical: canonicalUrl,
+  
+  // OpenGraph
+  ogTitle: 'Creative Playground | Motion Graphics & Design',
+  ogDescription: 'Creative experiments, motion graphics, and design work by Exequel Adizon. Featuring video editing, animation, and ARDE Esports graphics.',
   ogImage: '/images/og-image.jpg',
-  twitterTitle: 'Playground - Exequel Adizon',
-  twitterDescription: 'Discover experimental projects and creative explorations by Exequel Adizon (@adiluexe). A collection of innovative digital experiments and artistic endeavors.',
+  ogImageAlt: 'Creative Playground - Motion Graphics and Design by Exequel Adizon',
+  ogUrl: canonicalUrl,
+  ogType: 'website',
+  ogSiteName: 'Exequel Adizon Portfolio',
+  ogLocale: 'en_US',
+  
+  // Twitter Card
+  twitterCard: 'summary_large_image',
+  twitterSite: '@exadizon',
+  twitterCreator: '@exadizon',
+  twitterTitle: 'Creative Playground | Motion Graphics & Design',
+  twitterDescription: 'Creative experiments and motion graphics. Video editing, animation, and design work.',
   twitterImage: '/images/og-image.jpg',
-  twitterCard: 'summary_large_image'
+  twitterImageAlt: 'Creative Work'
+})
+
+// Structured Data (JSON-LD)
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'Creative Playground',
+        description: 'Experimental creative work and motion graphics',
+        creator: {
+          '@type': 'Person',
+          name: 'Exequel Adizon',
+          sameAs: ['https://www.instagram.com/adiluexe/']
+        },
+        about: [
+          'Motion Graphics',
+          'Video Editing',
+          'Animation',
+          'Graphic Design',
+          'Typography'
+        ]
+      })
+    }
+  ]
 })
 
 const { $gsap } = useNuxtApp()

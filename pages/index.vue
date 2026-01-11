@@ -2,16 +2,64 @@
 import { onMounted, ref } from 'vue'
 
 // SEO Meta Tags for Home Page
+const route = useRoute()
+const canonicalUrl = `https://exadizon.work${route.path}`
+
 useSeoMeta({
-  title: 'Exequel Adizon - Creative Developer & Designer',
-  description: 'Exequel Adizon (@adiluexe) is a designer and developer based in Taguig, Philippines. Passionate about crafting seamless and captivating digital experiences from design to code.',
-  ogTitle: 'Exequel Adizon - Creative Developer & Designer',
-  ogDescription: 'Exequel Adizon (@adiluexe) is a designer and developer based in Taguig, Philippines. Passionate about crafting seamless and captivating digital experiences from design to code.',
+  title: 'Exequel Adizon | Software Engineer & Product Designer Portfolio',
+  description: 'Exequel Adizon (@exadizon) - Award-winning Software Engineer specializing in Frontend Development (React), Mobile Apps (Flutter), and Product Design. Based in Taguig, Philippines. Building innovative digital experiences from concept to deployment.',
+  keywords: 'Exequel Adizon, exadizon, Software Engineer, Frontend Developer, Flutter Developer, React Developer, Product Designer, UI/UX Designer, Web Developer, Mobile Developer, Taguig Philippines, Full Stack Developer',
+  author: 'Exequel Adizon',
+  robots: 'index, follow',
+  canonical: canonicalUrl,
+  
+  // OpenGraph
+  ogTitle: 'Exequel Adizon | Software Engineer & Product Designer',
+  ogDescription: 'Award-winning Software Engineer specializing in Frontend (React), Mobile Development (Flutter), and Product Design. Creating innovative digital solutions in Taguig, Philippines.',
   ogImage: '/images/og-image.jpg',
-  twitterTitle: 'Exequel Adizon - Creative Developer & Designer',
-  twitterDescription: 'Exequel Adizon (@adiluexe) is a designer and developer based in Taguig, Philippines. Passionate about crafting seamless and captivating digital experiences from design to code.',
+  ogImageAlt: 'Exequel Adizon - Software Engineer and Product Designer Portfolio',
+  ogUrl: canonicalUrl,
+  ogType: 'website',
+  ogSiteName: 'Exequel Adizon Portfolio',
+  ogLocale: 'en_US',
+  
+  // Twitter Card
+  twitterCard: 'summary_large_image',
+  twitterSite: '@exadizon',
+  twitterCreator: '@exadizon',
+  twitterTitle: 'Exequel Adizon | Software Engineer & Product Designer',
+  twitterDescription: 'Award-winning Software Engineer specializing in Frontend (React), Mobile Development (Flutter), and Product Design. Building innovative digital experiences.',
   twitterImage: '/images/og-image.jpg',
-  twitterCard: 'summary_large_image'
+  twitterImageAlt: 'Exequel Adizon Portfolio'
+})
+
+// Structured Data (JSON-LD)
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Exequel Adizon',
+        jobTitle: 'Software Engineer & Product Designer',
+        description: 'Software Engineer specializing in Frontend Development, Mobile Apps, and Product Design',
+        url: 'https://exadizon.work',
+        sameAs: [
+          'https://github.com/exadizon',
+          'https://www.linkedin.com/in/exadizon/',
+          'https://www.instagram.com/adiluexe/'
+        ],
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Taguig',
+          addressCountry: 'Philippines'
+        },
+        email: 'exequel.adizon@gmail.com',
+        knowsAbout: ['React', 'Flutter', 'Frontend Development', 'Mobile Development', 'Product Design', 'UI/UX Design', 'TypeScript', 'JavaScript']
+      })
+    }
+  ]
 })
 
 const { $gsap } = useNuxtApp()

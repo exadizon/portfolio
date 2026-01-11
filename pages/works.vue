@@ -2,16 +2,77 @@
 import { onMounted, ref } from 'vue'
 
 // SEO Meta Tags for Works Page
+const route = useRoute()
+const canonicalUrl = `https://exadizon.work${route.path}`
+
 useSeoMeta({
-  title: 'Works - Exequel Adizon',
-  description: 'Explore the creative works and projects by Exequel Adizon (@adiluexe). From web development to mobile apps, discover innovative digital solutions and creative projects.',
-  ogTitle: 'Works - Exequel Adizon',
-  ogDescription: 'Explore the creative works and projects by Exequel Adizon (@adiluexe). From web development to mobile apps, discover innovative digital solutions and creative projects.',
+  title: 'Projects & Works | Exequel Adizon Portfolio',
+  description: 'Explore award-winning projects by Exequel Adizon - ALARP (Flutter medical app), FlowFit (Hackathon Winner), Bathala (GDAP GameOn Finalist), HeronFit, and more. Full-stack development, mobile apps, and web solutions using React, Flutter, Next.js, and Supabase.',
+  keywords: 'Exequel Adizon projects, Flutter apps, React projects, ALARP medical app, FlowFit hackathon, Bathala game, HeronFit fitness app, Web development portfolio, Mobile app development, GDAP GameOn',
+  author: 'Exequel Adizon',
+  robots: 'index, follow',
+  canonical: canonicalUrl,
+  
+  // OpenGraph
+  ogTitle: 'Projects & Works | Exequel Adizon',
+  ogDescription: 'Award-winning projects including ALARP (Flutter medical app), FlowFit (Hackathon Champion), and Bathala (GDAP GameOn Finalist). Full-stack mobile and web solutions.',
   ogImage: '/images/og-image.jpg',
-  twitterTitle: 'Works - Exequel Adizon',
-  twitterDescription: 'Explore the creative works and projects by Exequel Adizon (@adiluexe). From web development to mobile apps, discover innovative digital solutions and creative projects.',
+  ogImageAlt: 'Exequel Adizon Projects and Works Portfolio',
+  ogUrl: canonicalUrl,
+  ogType: 'website',
+  ogSiteName: 'Exequel Adizon Portfolio',
+  ogLocale: 'en_US',
+  
+  // Twitter Card
+  twitterCard: 'summary_large_image',
+  twitterSite: '@exadizon',
+  twitterCreator: '@exadizon',
+  twitterTitle: 'Projects & Works | Exequel Adizon Portfolio',
+  twitterDescription: 'Award-winning projects: ALARP, FlowFit (Hackathon Winner), Bathala (GDAP Finalist), HeronFit. Flutter, React, Next.js development.',
   twitterImage: '/images/og-image.jpg',
-  twitterCard: 'summary_large_image'
+  twitterImageAlt: 'Project Portfolio'
+})
+
+// Structured Data (JSON-LD) for Creative Works
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'Projects & Works',
+        description: 'Portfolio of software development projects by Exequel Adizon',
+        creator: {
+          '@type': 'Person',
+          name: 'Exequel Adizon'
+        },
+        hasPart: [
+          {
+            '@type': 'SoftwareApplication',
+            name: 'ALARP',
+            description: 'Full-stack Flutter app with 3D anatomical models and real-time leaderboard',
+            applicationCategory: 'MobileApplication',
+            operatingSystem: 'Android, iOS'
+          },
+          {
+            '@type': 'SoftwareApplication',
+            name: 'FlowFit',
+            description: 'C(Old) (St)art Hackathon 2025 Champion - Gamified health app with virtual pet system',
+            applicationCategory: 'MobileApplication',
+            award: 'C(Old) (St)art Hackathon 2025 Champion'
+          },
+          {
+            '@type': 'WebApplication',
+            name: 'Bathala',
+            description: 'GDAP GameOn 2025 Finalist - Web-based roguelike with dynamic difficulty adjustment',
+            url: 'https://bathala.quest',
+            award: 'GDAP GameOn 2025 Finalist'
+          }
+        ]
+      })
+    }
+  ]
 })
 
 const { $gsap } = useNuxtApp()
