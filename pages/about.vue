@@ -102,6 +102,12 @@ const stopMorphEffect = () => {
 }
 
 onMounted(() => {
+  // Guard clause: ensure GSAP is available
+  if (!$gsap || !$ScrollTrigger) {
+    console.error('GSAP or ScrollTrigger not available')
+    return
+  }
+
   // Header Animation
   const headerElements = aboutContent.value.querySelectorAll('.header-animate')
   $gsap.from(headerElements, {
@@ -134,6 +140,24 @@ onMounted(() => {
   // Experience Animation
   if (experienceSection.value) {
     const items = experienceSection.value.querySelectorAll('.experience-item')
+    const dots = experienceSection.value.querySelectorAll('.timeline-dot')
+    const line = experienceSection.value.querySelector('.timeline-line')
+    
+    // Animate timeline line
+    $gsap.from(line, {
+      scrollTrigger: {
+        trigger: experienceSection.value,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+        invalidateOnRefresh: true
+      },
+      scaleY: 0,
+      transformOrigin: 'top center',
+      duration: 1.2,
+      ease: 'power2.inOut'
+    })
+    
+    // Animate experience items
     $gsap.from(items, {
       scrollTrigger: {
         trigger: experienceSection.value,
@@ -141,11 +165,28 @@ onMounted(() => {
         toggleActions: 'play none none reverse',
         invalidateOnRefresh: true
       },
-      y: 30,
+      x: -20,
       opacity: 0,
       duration: 0.8,
       stagger: 0.15,
       ease: 'power3.out'
+    })
+    
+    // Pulse animation for dots
+    dots.forEach((dot, index) => {
+      $gsap.to(dot, {
+        scrollTrigger: {
+          trigger: items[index],
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+          invalidateOnRefresh: true
+        },
+        scale: 1.3,
+        duration: 0.4,
+        ease: 'power2.out',
+        yoyo: true,
+        repeat: 1
+      })
     })
   }
 
@@ -345,64 +386,65 @@ onMounted(() => {
       <div ref="experienceSection" class="w-full max-w-5xl mx-auto mb-16 sm:mb-24 px-4">
         <h2 class="text-3xl sm:text-4xl font-bold uppercase mb-12 sm:mb-16 tracking-tighter">Experience & Education</h2>
         
-        <div class="relative border-l border-text/20 ml-3 sm:ml-6 space-y-12 sm:space-y-16 text-left">
+        <div class="relative border-l border-text/20 ml-3 sm:ml-6 space-y-12 sm:space-y-16 text-left timeline-line">
             
             <!-- Education Item -->
-            <div class="relative pl-8 sm:pl-12 experience-item">
+            <div class="relative pl-8 sm:pl-12 experience-item group cursor-default hover:pl-10 sm:hover:pl-14 transition-all duration-300">
                 <!-- Dot -->
-                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary"></div>
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary timeline-dot group-hover:scale-125 transition-transform duration-300"></div>
                 
                 <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
-                    <h3 class="text-xl sm:text-2xl font-bold uppercase text-primary">Bachelor of Science in Computer Science</h3>
-                    <span class="text-sm font-mono opacity-60 shrink-0">Aug 2022 — Aug 2026</span>
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase text-primary tracking-tight">Bachelor of Science in Computer Science</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0 tracking-tight">Aug 2022 — Aug 2026</span>
                 </div>
-                <h4 class="text-lg font-medium uppercase mb-4 opacity-80">University of Makati</h4>
+                <h4 class="text-lg font-medium uppercase opacity-80 tracking-tight">University of Makati</h4>
             </div>
 
             <!-- Experience Item 1 -->
-            <div class="relative pl-8 sm:pl-12 experience-item">
-                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
+            <div class="relative pl-8 sm:pl-12 experience-item group cursor-default hover:pl-10 sm:hover:pl-14 transition-all duration-300">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text timeline-dot group-hover:scale-125 group-hover:bg-primary transition-all duration-300"></div>
                 
                 <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
-                    <h3 class="text-xl sm:text-2xl font-bold uppercase">Frontend Developer</h3>
-                    <span class="text-sm font-mono opacity-60 shrink-0">Aug 2025 — Nov 2025</span>
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase tracking-tight group-hover:text-primary transition-colors duration-300">Frontend Developer</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0 tracking-tight">Aug 2025 — Nov 2025</span>
                 </div>
-                <h4 class="text-lg font-medium uppercase mb-4 text-primary">EdLab Ltd.</h4>
-                <ul class="list-disc list-outside ml-4 space-y-2 text-base sm:text-lg opacity-80 leading-relaxed">
-                    <li>Maintained production CodeIgniter (PHP) codebase, debugging complex dynamic PDF generation tools to ensure accurate report delivery for 500+ student performance reviews monthly</li>
-                    <li>Bridged the design-engineering gap by creating high-fidelity Figma prototypes and marketing assets, ensuring strict brand consistency across web products and social channels with 95% stakeholder approval rate</li>
-                    <li>Reduced PDF generation errors by 40% through systematic debugging and code optimization</li>
-                </ul>
+                <h4 class="text-lg font-medium uppercase mb-3 text-primary tracking-tight">EdLab Ltd.</h4>
+                <p class="text-base sm:text-lg opacity-80 leading-relaxed tracking-tight">Maintained production PHP codebase and debugged dynamic PDF generation pipeline—reducing errors by 40% while bridging design and engineering through high-fidelity Figma prototypes achieving 95% first-pass approval</p>
             </div>
 
             <!-- Experience Item 2 -->
-            <div class="relative pl-8 sm:pl-12 experience-item">
-                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
+            <div class="relative pl-8 sm:pl-12 experience-item group cursor-default hover:pl-10 sm:hover:pl-14 transition-all duration-300">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text timeline-dot group-hover:scale-125 group-hover:bg-primary transition-all duration-300"></div>
                 
                 <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
-                    <h3 class="text-xl sm:text-2xl font-bold uppercase">Technical Support Staff</h3>
-                    <span class="text-sm font-mono opacity-60 shrink-0">Feb 2025 — May 2025</span>
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase tracking-tight group-hover:text-primary transition-colors duration-300">Technical Support Staff</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0 tracking-tight">Feb 2025 — May 2025</span>
                 </div>
-                <h4 class="text-lg font-medium uppercase mb-4 text-primary">Commission on Elections (COMELEC)</h4>
-                <ul class="list-disc list-outside ml-4 space-y-2 text-base sm:text-lg opacity-80 leading-relaxed">
-                    <li>Provided critical on-site technical support during the National Elections, ensuring zero-failure operation of Automated Counting Machines (ACMs) across 8 precincts in a high-pressure environment</li>
-                    <li>Troubleshot hardware and software discrepancies in real-time with 98% issue resolution rate, maintaining the integrity and speed of voting data processing for 8,000+ voters</li>
-                </ul>
+                <h4 class="text-lg font-medium uppercase mb-3 text-primary tracking-tight">Commission on Elections (COMELEC)</h4>
+                <p class="text-base sm:text-lg opacity-80 leading-relaxed tracking-tight">Delivered mission-critical technical support during National Elections with 98% issue resolution rate, maintaining zero-downtime for Automated Counting Machines across 8 precincts serving 8,000+ voters</p>
             </div>
 
             <!-- Experience Item 3 -->
-            <div class="relative pl-8 sm:pl-12 experience-item">
-                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text"></div>
+            <div class="relative pl-8 sm:pl-12 experience-item group cursor-default hover:pl-10 sm:hover:pl-14 transition-all duration-300">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-text timeline-dot group-hover:scale-125 group-hover:bg-primary transition-all duration-300"></div>
                 
                 <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
-                    <h3 class="text-xl sm:text-2xl font-bold uppercase">Head of Graphics</h3>
-                    <span class="text-sm font-mono opacity-60 shrink-0">Apr 2023 — Apr 2025</span>
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase tracking-tight group-hover:text-primary transition-colors duration-300">Head of Graphics</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0 tracking-tight">Apr 2023 — Apr 2025</span>
                 </div>
-                <h4 class="text-lg font-medium uppercase mb-4 text-primary">Fortem Ardeas Esports</h4>
-                <ul class="list-disc list-outside ml-4 space-y-2 text-base sm:text-lg opacity-80 leading-relaxed">
-                    <li>Built the organization's foundational visual identity from scratch, establishing a scalable design system and UI/UX guidelines for all digital, broadcast, and physical assets</li>
-                    <li>Designed dynamic graphics for internal tournaments and partner collaborations (Moonton Philippines, Tier One Entertainment), achieving 100K+ engagements by creating cohesive social campaigns, live‑stream overlays, and event branding.</li>
-                </ul>
+                <h4 class="text-lg font-medium uppercase mb-3 text-primary tracking-tight">Fortem Ardeas Esports</h4>
+                <p class="text-base sm:text-lg opacity-80 leading-relaxed tracking-tight">Architected complete visual identity from zero and spearheaded creative direction for tournaments and brand partnerships (Moonton Philippines, Tier One Entertainment)—driving 100K+ social engagements</p>
+            </div>
+
+            <!-- Hello World -->
+            <div class="relative pl-8 sm:pl-12 experience-item group cursor-default hover:pl-10 sm:hover:pl-14 transition-all duration-300">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary timeline-dot group-hover:scale-125 transition-transform duration-300"></div>
+                
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
+                    <h3 class="text-xl sm:text-2xl font-bold uppercase text-primary tracking-tight">Hello World</h3>
+                    <span class="text-sm font-mono opacity-60 shrink-0 tracking-tight">2018</span>
+                </div>
+                <p class="text-base sm:text-lg opacity-70 italic tracking-tight">Where it all began—my first line of code. :3</p>
             </div>
 
         </div>
