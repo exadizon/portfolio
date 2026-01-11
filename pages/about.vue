@@ -248,7 +248,7 @@ onMounted(() => {
       <div class="max-w-3xl mx-auto mb-12 sm:mb-16 text-lg sm:text-xl md:text-2xl uppercase leading-tight px-4 tracking-tighter header-animate">
         <p class="mb-8">
           I'm <span class="font-bold text-primary">Exequel Adizon</span>, a Software Engineer based in Taguig, Philippines. 
-          I bridge the gap between <span class="font-bold">aesthetic design</span> and <span class="font-bold">robust engineering</span>, building digital experiences that look good and work even better.
+          I build digital experiences at the intersection of <span class="font-bold">design and engineering</span>—specializing in <span class="font-bold">full-stack development</span> (frontend-focused) while leveraging <span class="font-bold">AI-powered tools</span> to ship faster and smarter.
         </p>
         
         <!-- Call to Action -->
