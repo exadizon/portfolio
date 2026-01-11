@@ -11,7 +11,7 @@
         </div>
         <div class="w-1/3 text-center">
           <NuxtLink to="/" class="font-bold text-xl" @click="closeMenu">
-            <span class="text-xl font-normal tracking-tighter">exadizon</span>
+            <!-- <span class="text-xl font-normal tracking-tighter">exadizon</span> -->
           </NuxtLink>
           
         </div>
